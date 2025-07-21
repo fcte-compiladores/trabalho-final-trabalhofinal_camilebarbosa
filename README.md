@@ -2,14 +2,14 @@
 
 ---
 
-### **Integrantes**
+## **Integrantes**
 * **Nome:** Camile Barbosa Gonzaga de Oliveira
 * **Matrícula:** 251035022
 * **Turma:** 16H
 
 ---
 
-### **Introdução**
+## **Introdução**
 No coração da computação, os **compiladores** e **intérpretes** são os programas mágicos que permitem que os computadores entendam as instruções que escrevemos. Eles são os tradutores essenciais que convertem o nosso código, que é escrito em linguagens de alto nível, em algo que a máquina pode executar.
 
 Enquanto um **compilador** geralmente traduz um código-fonte completo de uma vez, gerando um arquivo executável, um **interpretador** executa o código linha por linha. Este projeto segue a lógica de um interpretador para demonstrar as etapas fundamentais desse processo de tradução.
@@ -31,7 +31,7 @@ A linguagem implementada é minimalista, suportando apenas números inteiros e o
 
 ---
 
-### **Instalação**
+## **Instalação**
 Não há dependências externas. Para rodar o interpretador, basta clonar o repositório e executar o arquivo principal (`main.py`) com um interpretador Python 3 no seu terminal.
 
 ```bash
@@ -66,7 +66,7 @@ E04.txt: Também demonstra o funcionamento básico com uma expressão simples, m
 
 ---
 
-### **Bugs e Limitações Conhecidas**
+## **Bugs e Limitações Conhecidas**
 Este projeto é um protótipo pedagógico e, por isso, possui algumas limitações intencionais. Melhorias futuras poderiam incluir:
 
 Suporte a números com ponto flutuante (decimais).
