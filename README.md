@@ -32,7 +32,7 @@ A linguagem implementada é minimalista, suportando apenas números inteiros e o
 * `100 / 2 - 5`
 
 ---
-## ** Ferramentas **
+## **Ferramentas**
 
 O desenvolvimento deste projeto foi conduzido com o uso de três ferramentas principais, cada uma com um papel específico e fundamental para a sua realização.
 
@@ -79,11 +79,11 @@ E04.txt: Também demonstra o funcionamento básico com uma expressão simples, m
 
 Este projeto é um protótipo pedagógico e, por isso, possui algumas limitações. Melhorias futuras poderiam incluir:
 
-Suporte a números com ponto flutuante (decimais).
+-Suporte a números com ponto flutuante (decimais).
 
-Implementação de variáveis e atribuição (x = 10).
+-Implementação de variáveis e atribuição (x = 10).
 
-Tratamento de erros mais robusto e descritivo.
+-Tratamento de erros mais robusto e descritivo.
 
 ---
 
