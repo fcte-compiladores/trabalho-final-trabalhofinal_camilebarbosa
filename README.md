@@ -1,79 +1,83 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Hppw7Zh2)
-# Trabalho Final
+# **Interpretador de Expressões Aritméticas: Uma introdução ao mundo dos Compiladores!**
 
-## Escopo e organização
+---
 
-O trabalho é de tema livre dentro do escopo da disciplina de compiladores e
-consiste no desenvolvimento de alguma aplicação na área da disciplina (um
-interpretador para uma linguagem simples, compilador, analisadores de código,
-etc.)
+### **Integrantes**
+* **Nome:** Camile Barbosa Gonzaga de Oliveira
+* **Matrícula:** 251035022
+* **Turma:** 16H
 
-O trabalho pode ser feito em grupos de até 4 pessoas.
+---
 
-## Estrutura
+### **Introdução**
+No coração da computação, os **compiladores** e **intérpretes** são os programas mágicos que permitem que os computadores entendam as instruções que escrevemos. Eles são os tradutores essenciais que convertem o nosso código, que é escrito em linguagens de alto nível, em algo que a máquina pode executar.
 
-Os trabalhos devem ser entregues na atividade própria no [github-classrrom](...).
-Cada repositório deve ter uma estrutura parecida com a delineada abaixo:
+Enquanto um **compilador** geralmente traduz um código-fonte completo de uma vez, gerando um arquivo executável, um **interpretador** executa o código linha por linha. Este projeto segue a lógica de um interpretador para demonstrar as etapas fundamentais desse processo de tradução.
 
-* **README:** o arquivo README.md na base do repositório deve descrever os
-  detalhes da implementação do código. O README deve ter algumas seções 
-  obrigatórias:
-  - **Título**: nome do projeto
-  - **Integrantes**: lista com os nomes, matrículas e turma de cada integrante.
-  - **Introdução**: deve detalhar o que o projeto implementou, quais foram as
-    estratégias e algoritmos relevantes. Se o projeto implementa uma linguagem
-    não-comum ou um subconjunto de uma linguagem comum, deve conter alguns
-    exemplos de comandos nesta linguagem, descrendo a sua sintaxe e semântica,
-    quando necessário.
-  - **Instalação**: deve detalhar os passos para instalar as dependências e
-    rodar o código do projeto. Pode ser algo simples como *"Rode
-    `uv run lox hello.lox` para executar o interpretador."*, se a linguagem de
-    implementação permitir este tipo de facilidade.
+O processo de interpretação pode ser dividido em três fases principais, cada uma com um propósito distinto, mas interligado:
 
-    Você pode usar gerenciadores de pacotes específicos de linguagens populares
-    como uv, npm, cargo, etc, containers Docker/Podman, ou `.nix`.
-  - **Exemplos**: o projeto deve conter uma pasta "exemplos" com alguns arquivos
-    na linguagem de programação implementada. Deve conter exemplos com graus
-    variáveis de complexidade. Algo como: hello world, fibonacci, função
-    recursiva, alguma estrutura de dados e para finalizar um algoritmo um pouco
-    mais elaborado como ordenamento de listas, busca binária, etc.
-    
-    Note que isto é apenas um guia da ordem de dificuldade dos problemas.
-    Algumas linguagens sequer permitem a implementação de alguns dos exemplos
-    acima.
-  - **Referências**: descreva as referências que você utilizou para a
-    implementação da linguagem. Faça uma breve descrição do papel de cada
-    referência ou como ela foi usada no projeto. Caso você tenha usado algum 
-    código existente como referência, descreva as suas contribuições originais
-    para o projeto.
-  - **Estrutura do código**: faça uma descrição da estrutura geral do código
-    discutindo os módulos, classes, estruturas de dados ou funções principais. 
-    Explicite onde as etapas tradicionais de compilação (análise léxica, 
-    sintática, semântica, etc) são realizadas, quando relevante.
-  - **Bugs/Limitações/problemas conhecidos**: discuta as limitações do seu
-    projeto e problemas conhecidos e coisas que poderiam ser feitas para
-    melhorá-lo no futuro. Note: considere apenas melhorias incrementais e não
-    melhorias grandes como: "reimplementar tudo em Rust".
-* **Código:** O codigo fonte deve estar presente no repositório principal junto com
-  a declaração das suas dependências. Cada linguagem possui um mecanismo
-  específico para isso, mas seria algo como o arquivo pyproject.toml em Python
-  ou package.json no caso de Javascript.
+1.  **Análise Léxica:** Pense na análise léxica como a primeira leitura do código. Nessa etapa, o interpretador lê o texto da expressão, caractere por caractere, e o quebra em pequenas unidades significativas, chamadas **tokens**. Por exemplo, na expressão `10 + 5`, a análise léxica identificaria o número `10`, o sinal de adição `+` e o número `5` como tokens individuais. É a fase em que o código é transformado de uma simples sequência de caracteres em uma lista de "palavras" que a máquina pode entender.
 
-## Critérios
+2.  **Análise Sintática:** Após a análise léxica, a análise sintática entra em ação. Ela é como a gramática de uma língua. Sua função é pegar a lista de tokens e construir uma estrutura hierárquica que representa a lógica da expressão, chamada **Árvore de Sintaxe Abstrata (AST)**. Essa árvore garante que o código faça sentido e respeite as regras da linguagem. Por exemplo, ela reconhece que o sinal `+` opera sobre os números `10` e `5` e que os parênteses alteram a ordem das operações.
 
-Cada trabalho começa com 100% e pode receber penalizações ou bônus de acordo com
-os critérios abaixo:
+3.  **Interpretação ou Avaliação:** A etapa final é onde a mágica acontece. O interpretador percorre a árvore de sintaxe construída e executa as operações. Ele visita cada nó da árvore, avalia os valores e realiza as operações matemáticas na ordem correta, chegando ao resultado final da expressão. É nessa fase que o significado do código se torna realidade.
 
-- Ausência do README: -50%
-- Instruções de instalação não funcionam: até -20%
-- Referências não atribuídas ou falta de referâncias: -10%
-- Código confuso ou mal organizado: até -15%
-- Falta de clareza em apresentar as técnicas e etapas de compilação: -15%
-- Bugs e limitações sérias na implementação: até -25%
-- Escopo reduzido, ou implementação insuficiente: até 25%
-- Uso de código não atribuído/plágio: até -100%
-- Repositório bem estruturado e organizado: até 10%
-- Linguagem com conceitos originais/interessantes: até +15%
-- Testes unitários: até +15%, dependendo da cobertura
+A linguagem implementada é minimalista, suportando apenas números inteiros e os operadores de adição (`+`), subtração (`-`), multiplicação (`*`), divisão (`/`), além de parênteses para agrupar expressões.
 
-Após aplicar todos os bônus, a nota é truncada no intervalo 0-100%. 
+**Exemplos da linguagem:**
+* `10 + 5`
+* `3 * (2 + 4)`
+* `100 / 2 - 5`
+
+---
+
+### **Instalação**
+Não há dependências externas. Para rodar o interpretador, basta clonar o repositório e executar o arquivo principal (`main.py`) com um interpretador Python 3 no seu terminal.
+
+```bash
+python3 main.py
+
+
+O programa está configurado para ler e processar automaticamente os exemplos contidos na pasta examples/.
+
+Estrutura do Código
+A arquitetura do projeto é modular e foi projetada para que cada arquivo represente uma etapa do processo de compilação.
+
+lexer.py: O Analisador Léxico. Este módulo lê a expressão de entrada (uma sequência de caracteres) e a transforma em uma lista de tokens. Ele é a primeira etapa, responsável por quebrar a "frase" em "palavras".
+
+parser.py: O Analisador Sintático. Este módulo recebe a lista de tokens do analisador léxico e a organiza em uma Árvore de Sintaxe Abstrata (AST). Ele garante que a expressão siga as regras gramaticais da linguagem (como a ordem de operações).
+
+interpreter.py: O Interpretador. Este módulo é o avaliador da expressão. Ele percorre a AST e realiza as operações matemáticas de forma recursiva para calcular o resultado final.
+
+main.py: O Ponto de Entrada. Este arquivo orquestra todo o processo, chamando o Lexer, o Parser e o Interpreter em sequência e, mais importante, imprime o resultado de cada etapa, servindo como uma ferramenta pedagógica para visualização.
+
+---
+
+Exemplos
+A pasta examples/ contém arquivos de texto que demonstram as funcionalidades do interpretador. Cada arquivo serve para testar um aspecto diferente da implementação:
+
+E01.txt: Demonstra o funcionamento básico com uma expressão simples.
+
+E02.txt: Prova que o parser lida corretamente com a ordem de operações (multiplicação antes da adição).
+
+E03.txt: Mostra como o interpretador reage a um erro, reportando a falha de forma adequada.
+
+E04.txt: Também demonstra o funcionamento básico com uma expressão simples, mas com números maiores.
+
+---
+
+### **Bugs e Limitações Conhecidas**
+Este projeto é um protótipo pedagógico e, por isso, possui algumas limitações intencionais. Melhorias futuras poderiam incluir:
+
+Suporte a números com ponto flutuante (decimais).
+
+Implementação de variáveis e atribuição (x = 10).
+
+Tratamento de erros mais robusto e descritivo.
+
+---
+
+### **Referências**
+Pense em Python (Allen B. Downey) - Utilizado como material de referência para a programação do projeto em Python.
+
+---
