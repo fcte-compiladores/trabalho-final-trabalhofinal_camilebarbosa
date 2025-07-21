@@ -8,9 +8,11 @@
 * **Turma:** 16H
 
 ---
+## **Objetivo**
+O objetivo deste repositório é servir como porta entrada a estudantes e curiosos da computação!
 
 ## **Introdução**
-No coração da computação, os **compiladores** e **intérpretes** são os programas mágicos que permitem que os computadores entendam as instruções que escrevemos. Eles são os tradutores essenciais que convertem o nosso código, que é escrito em linguagens de alto nível, em algo que a máquina pode executar.
+No coração da computadores, os **compiladores** e **intérpretes** são os programas mágicos que permitem que essas máquinas entendam as instruções que escrevemos. Eles são os tradutores essenciais que convertem o nosso código, que é escrito em linguagens de alto nível, em algo que a máquina pode executar.
 
 Enquanto um **compilador** geralmente traduz um código-fonte completo de uma vez, gerando um arquivo executável, um **interpretador** executa o código linha por linha. Este projeto segue a lógica de um interpretador para demonstrar as etapas fundamentais desse processo de tradução.
 
@@ -30,17 +32,22 @@ A linguagem implementada é minimalista, suportando apenas números inteiros e o
 * `100 / 2 - 5`
 
 ---
+## ** Ferramentas **
+
+O desenvolvimento deste projeto foi conduzido com o uso de três ferramentas principais, cada uma com um papel específico e fundamental para a sua realização.
+
+Python 3: A linguagem de programação é o principal. A sintaxe clara e a vasta coleção de bibliotecas Python a tornam perfeita para criar nosso projeto. Nós implementamos as diferentes etapas do interpretador em arquivos separados, facilitando a compreensão e a organização do código, tudo isso graças ao Python.
+
+GitHub: O GitHub foi utilizado para o versionamento e a entrega do projeto. A plataforma permitiu gerenciar o código-fonte de forma eficiente e organizar a documentação de acordo com os requisitos do professor.
+
+Markdown: O Markdown utilizado para a criação da documentação no arquivo README.md (Este que você está lendo).
+
 
 ## **Instalação**
-Não há dependências externas. Para rodar o interpretador, basta clonar o repositório e executar o arquivo principal (`main.py`) com um interpretador Python 3 no seu terminal.
-
-```bash
-python3 main.py
+Não há dependências externas. Para rodar o interpretador, basta clonar o repositório (git clone __link do repositório__) e executar o arquivo principal (`main.py`) com um interpretador Python 3 no seu terminal ( -- python3 main.py -- ).
 
 
-O programa está configurado para ler e processar automaticamente os exemplos contidos na pasta examples/.
-
-Estrutura do Código
+## **Estrutura do Código**
 A arquitetura do projeto é modular e foi projetada para que cada arquivo represente uma etapa do processo de compilação.
 
 lexer.py: O Analisador Léxico. Este módulo lê a expressão de entrada (uma sequência de caracteres) e a transforma em uma lista de tokens. Ele é a primeira etapa, responsável por quebrar a "frase" em "palavras".
@@ -51,9 +58,11 @@ interpreter.py: O Interpretador. Este módulo é o avaliador da expressão. Ele 
 
 main.py: O Ponto de Entrada. Este arquivo orquestra todo o processo, chamando o Lexer, o Parser e o Interpreter em sequência e, mais importante, imprime o resultado de cada etapa, servindo como uma ferramenta pedagógica para visualização.
 
+O programa está configurado para ler e processar automaticamente os exemplos contidos na pasta examples/.
+
 ---
 
-Exemplos
+## **Exemplos**
 A pasta examples/ contém arquivos de texto que demonstram as funcionalidades do interpretador. Cada arquivo serve para testar um aspecto diferente da implementação:
 
 E01.txt: Demonstra o funcionamento básico com uma expressão simples.
@@ -67,7 +76,8 @@ E04.txt: Também demonstra o funcionamento básico com uma expressão simples, m
 ---
 
 ## **Bugs e Limitações Conhecidas**
-Este projeto é um protótipo pedagógico e, por isso, possui algumas limitações intencionais. Melhorias futuras poderiam incluir:
+
+Este projeto é um protótipo pedagógico e, por isso, possui algumas limitações. Melhorias futuras poderiam incluir:
 
 Suporte a números com ponto flutuante (decimais).
 
@@ -77,7 +87,7 @@ Tratamento de erros mais robusto e descritivo.
 
 ---
 
-### **Referências**
+## **Referências**
 Pense em Python (Allen B. Downey) - Utilizado como material de referência para a programação do projeto em Python.
 
 ---
