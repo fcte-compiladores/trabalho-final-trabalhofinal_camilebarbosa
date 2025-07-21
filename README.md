@@ -9,10 +9,10 @@
 
 ---
 ## **Objetivo**
-O objetivo deste repositório é servir como porta entrada a estudantes e curiosos da computação!
+O objetivo deste repositório é servir como porta de entrada a estudantes e curiosos da computação!
 
 ## **Introdução**
-No coração da computadores, os **compiladores** e **intérpretes** são os programas mágicos que permitem que essas máquinas entendam as instruções que escrevemos. Eles são os tradutores essenciais que convertem o nosso código, que é escrito em linguagens de alto nível, em algo que a máquina pode executar.
+No coração dos computadores, os **compiladores** e **intérpretes** são os programas mágicos que permitem que essas máquinas entendam as instruções que escrevemos. Eles são os tradutores essenciais que convertem o que nós dizemos (nosso código),em algo que a máquina entenda (um arquivo executável) .
 
 Enquanto um **compilador** geralmente traduz um código-fonte completo de uma vez, gerando um arquivo executável, um **interpretador** executa o código linha por linha. Este projeto segue a lógica de um interpretador para demonstrar as etapas fundamentais desse processo de tradução.
 
